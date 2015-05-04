@@ -1,0 +1,41 @@
+<map version="0.9.0">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1419682703700" ID="ID_1316758880" MODIFIED="1424777294126" TEXT="browser testing of security policy implementation">
+<node CREATED="1419683422650" FOLDED="true" HGAP="-2" ID="ID_1383977682" MODIFIED="1424777301897" POSITION="right" TEXT="Maffeis paper" VSHIFT="219">
+<node CREATED="1419684966911" HGAP="19" ID="ID_1078382028" MODIFIED="1419686242139" TEXT="subdomains setup for requests describe web app in general" VSHIFT="-8"/>
+<node CREATED="1419685076035" HGAP="25" ID="ID_1518894622" MODIFIED="1419685237709" TEXT="generator function for tests typical test case" VSHIFT="-3"/>
+<node CREATED="1419685270163" ID="ID_721656830" MODIFIED="1419685289133" TEXT="what range of policy relevant tests have we covered W3C"/>
+<node CREATED="1419686170634" ID="ID_239147586" MODIFIED="1419686330315" TEXT="criteria for what&apos;s more important to implement first (ie. navigartion csp)_"/>
+</node>
+<node CREATED="1419683436873" HGAP="56" ID="ID_1561816614" MODIFIED="1424777307932" POSITION="left" TEXT="Current understanding of browser sec." VSHIFT="27">
+<node CREATED="1419686253782" FOLDED="true" ID="ID_939620121" MODIFIED="1424777311413" TEXT="taxonomy of attacks ">
+<node CREATED="1419686623783" ID="ID_951374065" MODIFIED="1419687223177" TEXT="Cross Site Request Forgery"/>
+<node CREATED="1419816012876" ID="ID_611257682" MODIFIED="1419816043337" TEXT="redirection attacks"/>
+<node CREATED="1419816052291" ID="ID_1357501522" MODIFIED="1419816070242" TEXT="HTTP header injection"/>
+<node CREATED="1419816079102" ID="ID_468822601" MODIFIED="1419816148253" TEXT="frame injection"/>
+<node CREATED="1419816154825" ID="ID_1023863137" MODIFIED="1419816196499" TEXT="we do not worry about objects like shockwave, java , activeX , and server side such as SQL injection"/>
+<node CREATED="1419816202332" ID="ID_428844814" MODIFIED="1419816220384" TEXT="File System access?"/>
+<node CREATED="1419816237107" ID="ID_1626409856" MODIFIED="1419816241161" TEXT="applicaton logic hacks"/>
+<node CREATED="1419816257887" ID="ID_1525046723" MODIFIED="1419816264595" TEXT="session fixation, cookies"/>
+<node CREATED="1419816652006" ID="ID_325313620" MODIFIED="1419816668943" TEXT="access control bypass "/>
+</node>
+<node CREATED="1419686388006" FOLDED="true" ID="ID_451194548" MODIFIED="1424777318350" TEXT="toxonomy of policies">
+<node CREATED="1419686409173" HGAP="17" ID="ID_1434297754" MODIFIED="1419686631065" TEXT="Same origin policy" VSHIFT="1"/>
+<node CREATED="1419686421714" ID="ID_1686775462" MODIFIED="1419686427422" TEXT="Content security policy"/>
+<node CREATED="1419686577423" ID="ID_471560927" MODIFIED="1419686586892" TEXT="Cross Origin Resource sharing"/>
+<node CREATED="1419686595339" ID="ID_609784666" MODIFIED="1419686619360" TEXT="other"/>
+</node>
+</node>
+<node CREATED="1419683458697" FOLDED="true" HGAP="-813" ID="ID_248343502" MODIFIED="1424777306076" POSITION="right" TEXT="motivation for security policies" VSHIFT="-324">
+<node CREATED="1419683581311" FOLDED="true" HGAP="-418" ID="ID_930510632" MODIFIED="1419684813493" TEXT="history of browser support" VSHIFT="44">
+<node CREATED="1419683621597" FOLDED="true" HGAP="-457" ID="ID_1019078524" MODIFIED="1424777289120" TEXT="conflict in interpretation" VSHIFT="86">
+<node CREATED="1419683924850" ID="ID_1847451964" MODIFIED="1419683936930" TEXT="support history "/>
+</node>
+<node CREATED="1419683948040" HGAP="-82" ID="ID_70911206" MODIFIED="1419684290112" TEXT="where is it going?" VSHIFT="-58"/>
+</node>
+<node CREATED="1419684116714" HGAP="-106" ID="ID_5141457" LINK="#ID_721656830" MODIFIED="1419686117090" TEXT="Review of what currently fails on what following discussion" VSHIFT="-17"/>
+</node>
+<node CREATED="1419684306073" HGAP="-689" ID="ID_1522626805" MODIFIED="1419686849304" POSITION="left" TEXT="policy / attack interface" VSHIFT="6"/>
+<node CREATED="1419686813791" HGAP="-303" ID="ID_1375387007" MODIFIED="1419686836430" POSITION="right" TEXT="" VSHIFT="-388"/>
+</node>
+</map>
