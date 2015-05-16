@@ -14,8 +14,8 @@
 \section{Introduction}
 
 In recent years, there has been an explosion of thick client web architecture web applications,
-which means a shift in the attack surface available to hackers that was previously overlooked or deemed \
-less crutial than server logic or other serious network and server failure.\
+which means a shift in the importance of this attack surface available to hackers that was previously overlooked or deemed \
+less crutial than server logic or other serious network and server exploits.\
 
 When asked about Cross Site Scripting or Cross Site Request Forgery a lot of developers still regard\
 these types of attacks not of paramount importance, even if they long surpassed the number of reported\
@@ -39,8 +39,12 @@ on the client-side.
 It is a useful tool for browser developers to along their unit tests for the implementation of those policies, and web developers to test their browsers\
 It also contains experimental tests from proposed standards and hence is a good place to consider the direction web standards should be going towards in terms of securing the client-side.\
 
-The purpose of this paper is to briefly explain the work of this tool and to expand in the direction of completeness and to \
-try to resolve the tension between security and usability on the browser in order to increase usefulness and ultimately adoption.\
+The purpose of this paper is to briefly explain the work of this tool and to build up on it in the direction of completeness and modularity \
+the goal is to aleviate the tension between completeness, security and usability, to know for a fact when using different browsers \
+due to thorough  empirical testing the security of these browsers .\
+
+We also try to add a pedagogical aspect that ensures maximum usability and hence adoption by developers and security concientious users.\ 
+Ultimately this means providing a risk analysis and expert knowlege breakdown that is informed by the data we progressively and systematically analyse by testing all the browsers in the wild.\
 
 \section{Background}
 

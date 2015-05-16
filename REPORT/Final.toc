@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {subsection}{\numberline {1.1}motivation}{1}
+\contentsline {subsection}{\numberline {1.2}objectives}{2}
+\contentsline {subsection}{\numberline {1.3}contribution}{3}
+\contentsline {subsection}{\numberline {1.4}Structure}{3}
+\contentsline {section}{\numberline {2}Background}{3}
+\contentsline {subsection}{\numberline {2.1}History}{3}
+\contentsline {subsubsection}{\numberline {2.1.1}90's to 2010}{3}
+\contentsline {subsubsection}{\numberline {2.1.2}2010-2015}{5}
+\contentsline {subsection}{\numberline {2.2}High level overview of browser functions}{6}
+\contentsline {subsubsection}{\numberline {2.2.1}Uniform Resource Locators}{6}
+\contentsline {subsubsection}{\numberline {2.2.2}What is HTTP/1.1?}{7}
+\contentsline {subsubsection}{\numberline {2.2.3}what about HTTPS/TLS?}{7}
+\contentsline {subsubsection}{\numberline {2.2.4}Basic interaction, request and response}{8}
+\contentsline {subsubsection}{\numberline {2.2.5}Important header verbs and fields}{9}
+\contentsline {subsubsection}{\numberline {2.2.6}Cookies}{9}
+\contentsline {subsubsection}{\numberline {2.2.7}Origins}{10}
+\contentsline {subsubsection}{\numberline {2.2.8}the DOM, javascript and CSS}{11}
+\contentsline {subsubsection}{\numberline {2.2.9}XMLHTTPRequest}{12}
+\contentsline {subsubsection}{\numberline {2.2.10}external objects}{12}
+\contentsline {subsection}{\numberline {2.3}Attacks on the client}{13}
+\contentsline {subsubsection}{\numberline {2.3.1}XSS}{13}
+\contentsline {subsubsection}{\numberline {2.3.2}CSRF}{16}
+\contentsline {subsubsection}{\numberline {2.3.3}XST}{19}
+\contentsline {subsubsection}{\numberline {2.3.4}Framebusting or clickjacking}{19}
+\contentsline {subsubsection}{\numberline {2.3.5}Other}{20}
+\contentsline {subsection}{\numberline {2.4}Security policies}{20}
+\contentsline {subsubsection}{\numberline {2.4.1}Same Origin Policy}{20}
+\contentsline {subsubsection}{\numberline {2.4.2}Cross Origin Resource Sharing}{20}
+\contentsline {subsubsection}{\numberline {2.4.3}Content security Policy}{23}
+\contentsline {subsubsection}{\numberline {2.4.4}X-frame-Options}{24}
+\contentsline {subsubsection}{\numberline {2.4.5}HSTS}{24}
+\contentsline {subsection}{\numberline {2.5}Adoption}{24}
+\contentsline {section}{\numberline {3}BrowserAudit as it stands}{25}
+\contentsline {subsection}{\numberline {3.1}Initial project}{25}
+\contentsline {subsection}{\numberline {3.2}Current version adding tests}{25}
+\contentsline {section}{\numberline {4}Design and Implementation}{25}
+\contentsline {section}{\numberline {5}Strech Goal}{25}
+\contentsline {section}{\numberline {6}Evaluation}{25}
+\contentsline {subsection}{\numberline {6.1}Conclusion}{26}
