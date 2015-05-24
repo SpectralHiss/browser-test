@@ -36,19 +36,13 @@ What is not allowed in strict mode, according to \cite{resig}:
 \end{itemize}
 
 Since all of these are restrictions, we will trust that it doesn't over restrict and will just test for negative properties for each of these prohibited behaviour.\
-And a 
 
 Hence, our first test is:
 
 \begin{verbatim}
  (function(){
   "use strict";
-  try{
-    bignametoavoidclash = 'initialising a global, -10000 marks!';
-  }
-  catch(bro){
-    console.log("you shouldn't have done that" + bro);
-  }
+  bignametoavoidclash = 'initialising a global, -10000 marks!'
   }());
 \end{verbatim}
 

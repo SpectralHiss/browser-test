@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.3)  16 MAY 2015 18:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.11.3)  23 MAY 2015 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -241,12 +241,70 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen103
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks17
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks18
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks16
+\KV@toks@=\toks21
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -268,10 +326,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count88
+\Gread@gobject=\count100
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
 )
 (/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
@@ -284,9 +342,9 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks17
-\XKV@tempa@toks=\toks18
-\XKV@depth=\count89
+\XKV@toks=\toks22
+\XKV@tempa@toks=\toks23
+\XKV@depth=\count101
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 (/usr/share/texmf/tex/latex/xcolor/xcolor.sty
@@ -310,10 +368,10 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 (/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks19
+\pgfutil@everybye=\toks24
 )
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box26
+\pgfutil@abb=\box28
 
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
@@ -329,26 +387,26 @@ Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
 Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks20
-\pgfkeys@temptoks=\toks21
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
 
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks22
+\pgfkeys@tmptoks=\toks27
 ))
-\pgf@x=\dimen105
-\pgf@y=\dimen106
-\pgf@xa=\dimen107
-\pgf@ya=\dimen108
-\pgf@xb=\dimen109
-\pgf@yb=\dimen110
-\pgf@xc=\dimen111
-\pgf@yc=\dimen112
+\pgf@x=\dimen114
+\pgf@y=\dimen115
+\pgf@xa=\dimen116
+\pgf@ya=\dimen117
+\pgf@xb=\dimen118
+\pgf@yb=\dimen119
+\pgf@xc=\dimen120
+\pgf@yc=\dimen121
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count90
-\c@pgf@countb=\count91
-\c@pgf@countc=\count92
-\c@pgf@countd=\count93
+\c@pgf@counta=\count102
+\c@pgf@countb=\count103
+\c@pgf@countc=\count104
+\c@pgf@countd=\count105
 
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -363,8 +421,8 @@ File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
-\pgfsyssoftpath@smallbuffer@items=\count94
-\pgfsyssoftpath@bigbuffer@items=\count95
+\pgfsyssoftpath@smallbuffer@items=\count106
+\pgfsyssoftpath@bigbuffer@items=\count107
 )
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -376,12 +434,12 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen113
-\pgfmath@count=\count96
-\pgfmath@box=\box27
-\pgfmath@toks=\toks23
-\pgfmath@stack@operand=\toks24
-\pgfmath@stack@operation=\toks25
+\pgfmath@dimen=\dimen122
+\pgfmath@count=\count108
+\pgfmath@box=\box29
+\pgfmath@toks=\toks28
+\pgfmath@stack@operand=\toks29
+\pgfmath@stack@operation=\toks30
 )
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
@@ -392,51 +450,51 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count97
+\c@pgfmathroundto@lastzeros=\count109
 ))
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen114
-\pgf@picmaxx=\dimen115
-\pgf@picminy=\dimen116
-\pgf@picmaxy=\dimen117
-\pgf@pathminx=\dimen118
-\pgf@pathmaxx=\dimen119
-\pgf@pathminy=\dimen120
-\pgf@pathmaxy=\dimen121
-\pgf@xx=\dimen122
-\pgf@xy=\dimen123
-\pgf@yx=\dimen124
-\pgf@yy=\dimen125
-\pgf@zx=\dimen126
-\pgf@zy=\dimen127
+\pgf@picminx=\dimen123
+\pgf@picmaxx=\dimen124
+\pgf@picminy=\dimen125
+\pgf@picmaxy=\dimen126
+\pgf@pathminx=\dimen127
+\pgf@pathmaxx=\dimen128
+\pgf@pathminy=\dimen129
+\pgf@pathmaxy=\dimen130
+\pgf@xx=\dimen131
+\pgf@xy=\dimen132
+\pgf@yx=\dimen133
+\pgf@yy=\dimen134
+\pgf@zx=\dimen135
+\pgf@zy=\dimen136
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen128
-\pgf@path@lasty=\dimen129
+\pgf@path@lastx=\dimen137
+\pgf@path@lasty=\dimen138
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen130
-\pgf@shorten@start@additional=\dimen131
+\pgf@shorten@end@additional=\dimen139
+\pgf@shorten@start@additional=\dimen140
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
-\pgfpic=\box28
-\pgf@hbox=\box29
-\pgf@layerbox@main=\box30
-\pgf@picture@serial@count=\count98
+\pgfpic=\box30
+\pgf@hbox=\box31
+\pgf@layerbox@main=\box32
+\pgf@picture@serial@count=\count110
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen132
+\pgflinewidth=\dimen141
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen133
-\pgf@pt@y=\dimen134
-\pgf@pt@temp=\dimen135
+\pgf@pt@x=\dimen142
+\pgf@pt@y=\dimen143
+\pgf@pt@temp=\dimen144
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -452,15 +510,15 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen136
-\pgf@sys@shading@range@num=\count99
+\pgf@max=\dimen145
+\pgf@sys@shading@range@num=\count111
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
-\pgfexternal@startupbox=\box31
+\pgfexternal@startupbox=\box33
 ))
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
@@ -473,15 +531,15 @@ File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
-\pgfnodeparttextbox=\box32
+\pgfnodeparttextbox=\box34
 )
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen137
-\pgf@nodesepend=\dimen138
+\pgf@nodesepstart=\dimen146
+\pgf@nodesepend=\dimen147
 )
 (/usr/share/texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
@@ -491,39 +549,39 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex))
 (/usr/share/texmf/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen139
-\pgffor@skip=\dimen140
-\pgffor@stack=\toks26
-\pgffor@toks=\toks27
+\pgffor@iter=\dimen148
+\pgffor@skip=\dimen149
+\pgffor@stack=\toks31
+\pgffor@toks=\toks32
 ))
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
-\pgf@plot@mark@count=\count100
-\pgfplotmarksize=\dimen141
+\pgf@plot@mark@count=\count112
+\pgfplotmarksize=\dimen150
 )
-\tikz@lastx=\dimen142
-\tikz@lasty=\dimen143
-\tikz@lastxsaved=\dimen144
-\tikz@lastysaved=\dimen145
-\tikzleveldistance=\dimen146
-\tikzsiblingdistance=\dimen147
-\tikz@figbox=\box33
-\tikz@tempbox=\box34
-\tikztreelevel=\count101
-\tikznumberofchildren=\count102
-\tikznumberofcurrentchild=\count103
-\tikz@fig@count=\count104
+\tikz@lastx=\dimen151
+\tikz@lasty=\dimen152
+\tikz@lastxsaved=\dimen153
+\tikz@lastysaved=\dimen154
+\tikzleveldistance=\dimen155
+\tikzsiblingdistance=\dimen156
+\tikz@figbox=\box35
+\tikz@tempbox=\box36
+\tikztreelevel=\count113
+\tikznumberofchildren=\count114
+\tikznumberofcurrentchild=\count115
+\tikz@fig@count=\count116
 
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
-\pgfmatrixcurrentrow=\count105
-\pgfmatrixcurrentcolumn=\count106
-\pgf@matrix@numberofcolumns=\count107
+\pgfmatrixcurrentrow=\count117
+\pgfmatrixcurrentcolumn=\count118
+\pgf@matrix@numberofcolumns=\count119
 )
-\tikz@expandcount=\count108
+\tikz@expandcount=\count120
 
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
 hs.code.tex
@@ -534,49 +592,49 @@ ioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count109
-\calc@Bcount=\count110
-\calc@Adimen=\dimen148
-\calc@Bdimen=\dimen149
-\calc@Askip=\skip43
-\calc@Bskip=\skip44
+\calc@Acount=\count121
+\calc@Bcount=\count122
+\calc@Adimen=\dimen157
+\calc@Bdimen=\dimen158
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count111
-\calc@Cskip=\skip45
+\calc@Ccount=\count123
+\calc@Cskip=\skip48
 )
-\c@@todonotes@numberoftodonotes=\count112
+\c@@todonotes@numberoftodonotes=\count124
 )
 (./Final.aux (./background.aux) (./browserAudit.aux) (./designImpl.aux)
 (./evaluation.aux) (./conclusion.aux))
 \openout1 = `Final.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
-\scratchdimen=\dimen150
-\scratchbox=\box35
-\nofMPsegments=\count114
-\nofMParguments=\count115
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count116
-\MPscratchDim=\dimen151
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks29
+\scratchcounter=\count125
+\scratchdimen=\dimen159
+\scratchbox=\box37
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen160
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -625,21 +683,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-ABD: EveryShipout initializing macros
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 14.
- [1
+ABD: EveryShipout initializing macros [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1] (./Final.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 1.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 1.
- [1
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1] (./Final.toc [1
 
 ])
 \tf@toc=\write4
@@ -659,51 +705,51 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 30--33
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--37
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--44
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--49
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--62
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--70
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 76.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
  [2]
 \openout2 = `background.aux'.
 
@@ -810,8 +856,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--144
  []
 
 
-LaTeX Warning: Reference `subsubsec:CSRF' on page 7 undefined on input line 154
-.
+LaTeX Warning: Reference `subsec:CSRF' on page 7 undefined on input line 154.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 147--156
@@ -1024,96 +1069,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--233
  []
 
 [9]
-Overfull \hbox (6.25247pt too wide) in paragraph at lines 251--251
-\OT1/cmr/m/n/12 cookie 
- []
-
-
-Overfull \hbox (11.21353pt too wide) in paragraph at lines 251--251
-\OT1/cmr/m/n/12 caveats  
- []
-
-
-Overfull \hbox (6.25247pt too wide) in paragraph at lines 251--251
-\OT1/cmr/m/n/12 cookie 
- []
-
-
-Overfull \hbox (11.21353pt too wide) in paragraph at lines 251--251
-\OT1/cmr/m/n/12 caveats  
- []
-
-
-Overfull \hbox (6.25247pt too wide) in paragraph at lines 251--251
-\OT1/cmr/m/n/12 cookie 
- []
-
-
-Overfull \hbox (11.21353pt too wide) in paragraph at lines 251--251
-\OT1/cmr/m/n/12 caveats  
- []
-
-
-Overfull \hbox (6.25247pt too wide) in paragraph at lines 251--251
-\OT1/cmr/m/n/12 cookie 
- []
-
-
-Overfull \hbox (11.21353pt too wide) in paragraph at lines 251--251
-\OT1/cmr/m/n/12 caveats  
- []
-
-
-Overfull \hbox (1.6626pt too wide) in paragraph at lines 255--260
+Overfull \hbox (1.6626pt too wide) in paragraph at lines 253--258
 \OT1/cmr/m/n/12 http://example.com/ http://example.com:80/ http://example.com/p
 ath/file 
  []
 
 
-Overfull \hbox (15.37079pt too wide) in paragraph at lines 266--273
+Overfull \hbox (15.37079pt too wide) in paragraph at lines 264--271
 []\OT1/cmr/m/n/12 http://example.com/ http://example.com:8080/ http://www.examp
 le.com/
  []
 
 
-Overfull \hbox (43.5705pt too wide) in paragraph at lines 266--273
+Overfull \hbox (43.5705pt too wide) in paragraph at lines 264--271
 \OT1/cmr/m/n/12 https://example.com:80/ https://example.com/ http://example.org
 / http://ietf.org/ 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 294--298
+Underfull \hbox (badness 10000) in paragraph at lines 292--296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--302
+Underfull \hbox (badness 10000) in paragraph at lines 297--300
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--310
+Underfull \hbox (badness 10000) in paragraph at lines 307--312
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 341--346
+Underfull \hbox (badness 10000) in paragraph at lines 343--348
 
  []
 
 [12] <refl-XSS.png, id=67, 1257.69875pt x 767.86874pt>
 File: refl-XSS.png Graphic file (type png)
  <use refl-XSS.png>
-Package pdftex.def Info: refl-XSS.png used on input line 356.
+Package pdftex.def Info: refl-XSS.png used on input line 358.
 (pdftex.def)             Requested size: 390.0pt x 238.10715pt.
 
 <stored-XSS.png, id=68, 1267.73625pt x 737.75626pt>
 File: stored-XSS.png Graphic file (type png)
  <use stored-XSS.png>
-Package pdftex.def Info: stored-XSS.png used on input line 370.
+Package pdftex.def Info: stored-XSS.png used on input line 372.
 (pdftex.def)             Requested size: 390.0pt x 226.9572pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--381
+Underfull \hbox (badness 10000) in paragraph at lines 378--383
 
  []
 
@@ -1121,10 +1126,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 376--381
 File: DOM-XSS.png Graphic file (type png)
 
 <use DOM-XSS.png>
-Package pdftex.def Info: DOM-XSS.png used on input line 384.
+Package pdftex.def Info: DOM-XSS.png used on input line 386.
 (pdftex.def)             Requested size: 390.0pt x 242.58478pt.
  [14 <./stored-XSS.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 409--413
+Underfull \hbox (badness 10000) in paragraph at lines 411--415
 
  []
 
@@ -1132,230 +1137,266 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--413
 <./sessioncsrf.png, id=81, 863.225pt x 629.35126pt>
 File: ./sessioncsrf.png Graphic file (type png)
  <use ./sessioncsrf.png>
-Package pdftex.def Info: ./sessioncsrf.png used on input line 431.
+Package pdftex.def Info: ./sessioncsrf.png used on input line 433.
 (pdftex.def)             Requested size: 390.0pt x 284.32901pt.
 
-[16 <./sessioncsrf.png>] <./logincsrf.png, id=85, 876.27374pt x 676.5275pt>
+<./logincsrf.png, id=82, 876.27374pt x 676.5275pt>
 File: ./logincsrf.png Graphic file (type png)
-
-<use ./logincsrf.png>
-Package pdftex.def Info: ./logincsrf.png used on input line 444.
+ <use ./logincsrf.png>
+Package pdftex.def Info: ./logincsrf.png used on input line 446.
 (pdftex.def)             Requested size: 390.0pt x 301.10023pt.
- <./socialcsrf.png, id=86, 841.1425pt x 678.535pt>
+
+<./socialcsrf.png, id=83, 841.1425pt x 678.535pt>
 File: ./socialcsrf.png Graphic file (type png)
-
-<use ./socialcsrf.png>
-Package pdftex.def Info: ./socialcsrf.png used on input line 464.
+ <use ./socialcsrf.png>
+Package pdftex.def Info: ./socialcsrf.png used on input line 467.
 (pdftex.def)             Requested size: 390.0pt x 314.6044pt.
- [17 <./logincsrf.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 480--483
 
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 515--519
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 524--527
+[16] [17 <./sessioncsrf.png>] [18 <./logincsrf.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 483--486
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 532--536
+Underfull \hbox (badness 10000) in paragraph at lines 518--522
 
  []
 
 
-Overfull \hbox (47.3524pt too wide) in paragraph at lines 542--544
+Underfull \hbox (badness 10000) in paragraph at lines 527--530
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 535--539
+
+ []
+
+
+Overfull \hbox (47.3524pt too wide) in paragraph at lines 545--547
 []\OT1/cmr/m/n/12 If a re-source au-thor has a sim-ple text re-source re-sid-in
 g at http://example.com/hello
  []
 
 
-Overfull \hbox (32.13867pt too wide) in paragraph at lines 542--544
+Overfull \hbox (32.13867pt too wide) in paragraph at lines 545--547
 \OT1/cmr/m/n/12 which con-tains the string "Hello World!"  and would like http:
 //hello-world.example
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--546
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
-
- []
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 559--562
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 571--574
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 579--581
+Underfull \hbox (badness 10000) in paragraph at lines 552--553
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 602--605
+Underfull \hbox (badness 10000) in paragraph at lines 562--565
 
  []
 
 
-Overfull \hbox (54.60022pt too wide) in paragraph at lines 609--609
+Underfull \hbox (badness 10000) in paragraph at lines 574--577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 582--584
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 605--608
+
+ []
+
+
+Overfull \hbox (54.60022pt too wide) in paragraph at lines 612--612
 [] \OT1/cmtt/m/n/12 <meta http-equiv="Content-Security-Policy" content="script-
 src 'self'">[] 
  []
 
 
-Overfull \hbox (85.47523pt too wide) in paragraph at lines 617--617
+Overfull \hbox (85.47523pt too wide) in paragraph at lines 620--620
 []\OT1/cmtt/m/n/12 Content-Security-Policy: default-src 'self' http://eg.com ht
 tp://example.net;[] 
  []
 
 
-Overfull \hbox (36.07521pt too wide) in paragraph at lines 625--625
+Overfull \hbox (36.07521pt too wide) in paragraph at lines 628--628
 []                                     \OT1/cmtt/m/n/12 report-uri /csp-report-
 endpoint/[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--630
+Underfull \hbox (badness 10000) in paragraph at lines 630--633
 
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 640--643
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 643--646
 
  []
 
-) [23] [24] [25 <./socialcsrf.png>]
+[24]) [25] [26] [27 <./socialcsrf.png>]
 \openout2 = `browserAudit.aux'.
 
  (./browserAudit.tex
 Chapter 2.
-<./SOPbasic.png, id=116, 771.88374pt x 620.3175pt>
+<./SOPbasic.png, id=122, 771.88374pt x 620.3175pt>
 File: ./SOPbasic.png Graphic file (type png)
  <use ./SOPbasic.png>
 Package pdftex.def Info: ./SOPbasic.png used on input line 22.
 (pdftex.def)             Requested size: 390.0pt x 313.41405pt.
-)
-[26
+
+[28
 
 
 
-] [27 <./SOPbasic.png>]
+] [29 <./SOPbasic.png>] [30] [31] <db.pdf, id=136, 722.7pt x 406.51875pt>
+File: db.pdf Graphic file (type pdf)
+
+<use db.pdf>
+Package pdftex.def Info: db.pdf used on input line 96.
+(pdftex.def)             Requested size: 390.0pt x 219.37418pt.
+ [32 <./db.pdf>]
+Overfull \hbox (5.24036pt too wide) in paragraph at lines 126--127
+[]\OT1/cmr/m/n/12 originExpect // Cross-Origin Re-source Shar-ing -> Access-Con
+trol-Allow-
+ []
+
+
+Overfull \hbox (11.83334pt too wide) in paragraph at lines 128--129
+[]\OT1/cmr/m/n/12 headersExpect// Cross-Origin Re-source Shar-ing -> Access-Con
+trol-Allow-
+ []
+
+
+Overfull \hbox (17.28607pt too wide) in paragraph at lines 129--130
+[]\OT1/cmr/m/n/12 exposeExpect // Cross-Origin Re-source Shar-ing -> Access-Con
+trol-Expose-
+ []
+
+
+Overfull \hbox (2.06273pt too wide) in paragraph at lines 134--135
+[]\OT1/cmr/m/n/12 requestRefererHTTPSToHTTP // Re-quest Head-ers -> Ref-erer ->
+ should
+ []
+
+[33]) [34]
 \openout2 = `designImpl.aux'.
 
  (./designImpl.tex
 Chapter 3.
-) [28
+[35
 
 
 
 ]
+Overfull \hbox (11.3752pt too wide) in paragraph at lines 53--53
+[]    \OT1/cmtt/m/n/12 bignametoavoidclash = 'initialising a global, -10000 mar
+ks!';[] 
+ []
+
+) [36]
 \openout2 = `evaluation.aux'.
 
  (./evaluation.tex
 Chapter 4.
-[29
+[37
 
 
 
-]) [30]
+]) [38]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 Chapter 5.
-) [31
+) [39
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 []\OT1/cmr/m/it/12 Same Ori-gin Pol-icy\OT1/cmr/m/n/12 , RFC 6454, avail-able a
 t
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 []\OT1/cmr/m/it/12 Uniform Re-source Lo-ca-tor\OT1/cmr/m/n/12 , RFC 3986 , can 
 check at
  []
 
 
-Underfull \hbox (badness 1867) in paragraph at lines 101--103
+Underfull \hbox (badness 1867) in paragraph at lines 102--104
 \OT1/cmr/m/n/12 Webjail,\OT1/cmr/m/it/12 least-privilege in-te-gra-tion of thir
 d-party com-po-nents in web
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 [] \OT1/cmr/m/it/12 A Team Cymru EIS Re-port: Grow-ing Ex-ploita-tion of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 \OT1/cmr/m/it/12 Small Of-fice Routers Cre-at-ing Se-ri-ous Risks \OT1/cmr/m/n/
 12 , avail-able at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 []\OT1/cmr/m/it/12 BrowserAudit A web ap-pli-ca-tion that tests the se-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 \OT1/cmr/m/it/12 cu-rity of browser im-ple-men-ta-tions\OT1/cmr/m/n/12 , avail-
 able at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 \OT1/cmr/m/n/12 at http://www.doc.ic.ac.uk/teaching/distinguished-
  []
 
-[32
+[40
 
 
-] [33] (./Final.aux (./background.aux) (./browserAudit.aux)
+] [41] (./Final.aux (./background.aux) (./browserAudit.aux)
 (./designImpl.aux) (./evaluation.aux) (./conclusion.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 10709 strings out of 495028
- 201016 string characters out of 6181497
- 250401 words of memory out of 5000000
- 13643 multiletter control sequences out of 15000+600000
- 9930 words of font info for 35 fonts, out of 8000000 for 9000
+ 11245 strings out of 495028
+ 206239 string characters out of 6181497
+ 257853 words of memory out of 5000000
+ 14160 multiletter control sequences out of 15000+600000
+ 11055 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 63i,11n,78p,424b,667s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,11n,57p,424b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Final.pdf (39 pages, 848160 bytes).
+Output written on Final.pdf (47 pages, 930971 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 213 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

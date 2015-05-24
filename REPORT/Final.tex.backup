@@ -1,5 +1,6 @@
 \documentclass[a4paper,12pt]{report}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 
@@ -18,10 +19,10 @@
 
 
 \tableofcontents
-\pagebreak
-
 \listoffigures
 \listoftables
+
+\pagebreak
 \pagenumbering{arabic}
 
 \section{Introduction}
@@ -89,8 +90,9 @@ The remainder of this report consists of:
 
 \include{designImpl}
 
-\subsection{Conclusion}
+\include{evaluation}
 
+\include{conclusion}
 
 
 \begin{thebibliography}{1}

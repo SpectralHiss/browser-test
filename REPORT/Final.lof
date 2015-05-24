@@ -2,11 +2,12 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces steps involved in reflected XSS attack}}{13}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces steps involved in stored XSS attack}}{14}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces steps involved in DOM based XSS attack}}{15}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces The typical session Cross Site Request Forgery}}{16}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces The login Cross Site Request Forgery let's attacker abuse interconnectivity of Google services}}{17}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces The Social csrf : discoverd through automated reasoning tools }}{25}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces The typical session Cross Site Request Forgery}}{17}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The login Cross Site Request Forgery lets attacker abuse interconnectivity of Google services}}{18}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces The Social csrf : discoverd through automated reasoning tools }}{27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces This frog was uploaded to writeLaTeX via the project menu.}}{27}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Same origin policy typical test}}{29}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Database description of most important tables.}}{32}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

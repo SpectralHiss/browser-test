@@ -21,22 +21,34 @@
 \contentsline {section}{\numberline {1.3}Attacks on the client}{12}
 \contentsline {subsection}{\numberline {1.3.1}XSS}{12}
 \contentsline {subsection}{\numberline {1.3.2}CSRF}{16}
-\contentsline {subsection}{\numberline {1.3.3}XST}{18}
-\contentsline {subsection}{\numberline {1.3.4}Framebusting or clickjacking}{18}
-\contentsline {subsection}{\numberline {1.3.5}Other}{19}
-\contentsline {section}{\numberline {1.4}Security policies}{19}
-\contentsline {subsection}{\numberline {1.4.1}Same Origin Policy}{19}
-\contentsline {subsection}{\numberline {1.4.2}Cross Origin Resource Sharing}{19}
-\contentsline {subsection}{\numberline {1.4.3}Content security Policy}{22}
-\contentsline {subsection}{\numberline {1.4.4}X-frame-Options}{23}
-\contentsline {subsection}{\numberline {1.4.5}HSTS}{23}
-\contentsline {section}{\numberline {1.5}Adoption}{23}
-\contentsline {chapter}{\numberline {2}BrowserAudit as it stands}{26}
-\contentsline {section}{\numberline {2.1}Initial project}{26}
-\contentsline {section}{\numberline {2.2}Current version adding tests}{26}
-\contentsline {chapter}{\numberline {3}Design and Implementation}{28}
-\contentsline {section}{\numberline {3.1}Test Add interface}{28}
-\contentsline {section}{\numberline {3.2}statistics page}{28}
-\contentsline {section}{\numberline {3.3}Strech Goal: A DSL for test inputting and parameterisation }{28}
-\contentsline {chapter}{\numberline {4}Evaluation}{29}
-\contentsline {chapter}{\numberline {5}Conclusion}{31}
+\contentsline {subsubsection}{Session CSRF}{16}
+\contentsline {subsubsection}{Login CSRF}{16}
+\contentsline {subsubsection}{Redirection CSRF attack}{16}
+\contentsline {subsubsection}{Social CSRF}{19}
+\contentsline {subsubsection}{More about CSRF}{19}
+\contentsline {subsection}{\numberline {1.3.3}XST}{19}
+\contentsline {subsection}{\numberline {1.3.4}Framebusting or clickjacking}{20}
+\contentsline {subsection}{\numberline {1.3.5}Other}{20}
+\contentsline {section}{\numberline {1.4}Security policies}{20}
+\contentsline {subsection}{\numberline {1.4.1}Same Origin Policy}{20}
+\contentsline {subsection}{\numberline {1.4.2}Cross Origin Resource Sharing}{21}
+\contentsline {subsection}{\numberline {1.4.3}Content security Policy}{23}
+\contentsline {subsection}{\numberline {1.4.4}X-frame-Options}{24}
+\contentsline {subsection}{\numberline {1.4.5}HSTS}{24}
+\contentsline {section}{\numberline {1.5}Adoption}{24}
+\contentsline {chapter}{\numberline {2}BrowserAudit as it stands}{28}
+\contentsline {section}{\numberline {2.1}Initial project (V1)}{28}
+\contentsline {section}{\numberline {2.2}Current version adding tests (V2)}{30}
+\contentsline {subsection}{\numberline {2.2.1}Test Backend in V2}{31}
+\contentsline {subsubsection}{Overall execution model}{31}
+\contentsline {subsubsection}{PostgreSQL model}{31}
+\contentsline {subsubsection}{The server}{32}
+\contentsline {subsubsection}{The Client test classes }{33}
+\contentsline {chapter}{\numberline {3}Design and Implementation}{35}
+\contentsline {section}{\numberline {3.1}Improving extensibility and coverage}{35}
+\contentsline {subsubsection}{test Adding interface}{35}
+\contentsline {subsubsection}{adding new tests}{35}
+\contentsline {section}{\numberline {3.2}statistics page}{36}
+\contentsline {section}{\numberline {3.3}Strech Goal: A DSL for test inputting and parameterisation }{36}
+\contentsline {chapter}{\numberline {4}Evaluation}{37}
+\contentsline {chapter}{\numberline {5}Conclusion}{39}
