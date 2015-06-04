@@ -36,19 +36,20 @@
 \contentsline {subsection}{\numberline {1.4.4}X-frame-Options}{24}
 \contentsline {subsection}{\numberline {1.4.5}HSTS}{24}
 \contentsline {section}{\numberline {1.5}Adoption}{24}
-\contentsline {chapter}{\numberline {2}BrowserAudit as it stands}{28}
-\contentsline {section}{\numberline {2.1}Initial project (V1)}{28}
-\contentsline {section}{\numberline {2.2}Current version adding tests (V2)}{30}
-\contentsline {subsection}{\numberline {2.2.1}Test Backend in V2}{31}
-\contentsline {subsubsection}{Overall execution model}{31}
-\contentsline {subsubsection}{PostgreSQL model}{31}
-\contentsline {subsubsection}{The server}{32}
-\contentsline {subsubsection}{The Client test classes }{33}
-\contentsline {chapter}{\numberline {3}Design and Implementation}{35}
-\contentsline {section}{\numberline {3.1}Improving extensibility and coverage}{35}
-\contentsline {subsubsection}{test Adding interface}{35}
-\contentsline {subsubsection}{adding new tests}{35}
-\contentsline {section}{\numberline {3.2}statistics page}{36}
-\contentsline {section}{\numberline {3.3}Strech Goal: A DSL for test inputting and parameterisation }{36}
-\contentsline {chapter}{\numberline {4}Evaluation}{37}
-\contentsline {chapter}{\numberline {5}Conclusion}{39}
+\contentsline {chapter}{\numberline {2}Design and implementation}{28}
+\contentsline {section}{\numberline {2.1}Improving extensibility and coverage}{28}
+\contentsline {subsubsection}{Test management interface}{28}
+\contentsline {subsubsection}{Adding new tests}{28}
+\contentsline {section}{\numberline {2.2}statistics page}{30}
+\contentsline {section}{\numberline {2.3}Open ended Goal: Data-driven browser security reference for the developer }{30}
+\contentsline {chapter}{\numberline {3}Evaluation}{31}
+\contentsline {chapter}{\numberline {4}Conclusion}{33}
+\contentsline {chapter}{\numberline {5}Appendix A: BrowserAudit, the previous versions}{34}
+\contentsline {section}{\numberline {5.1}Initial project (V1)}{34}
+\contentsline {section}{\numberline {5.2}Current version (V2)}{36}
+\contentsline {subsection}{\numberline {5.2.1}Test Backend in V2}{37}
+\contentsline {subsubsection}{Overall working principle}{37}
+\contentsline {subsubsection}{PostgreSQL model}{38}
+\contentsline {subsubsection}{The server}{39}
+\contentsline {subsubsection}{The Client test classes}{41}
+\contentsline {subsubsection}{Test Reporting}{43}

@@ -1,13 +1,24 @@
 
-\chapter{Design and Implementation}
+\chapter{Design and implementation}
 
 \section{Improving extensibility and coverage}
 \label{label:addtest}
 
-\subsubsection{test Adding interface}
+\subsubsection{Test management interface}
 
+We needed to add tests..
+we discussed what functions we needed
+decided to just do categories manually , explained how we made it okay design-wise with the .sql file we expect to be filled with all new categories.
+what can we do to add tests , we had to alter
+given the way the context of tests work we can run any js and call test PASS and FAIL.. or call any of the existing ones
 
-\subsubsection{adding new tests}
+the UI
+
+reusing existing server code
+
+handling static assets
+
+\subsubsection{Adding new tests}
 
 we start simple, because simple is beautiful. The simplest types of tests we could thing of required a new category: Client-only tests.
 These tests do not require interaction from the server, except for reporting the results for a particular test execution.
@@ -42,13 +53,15 @@ Hence, our first test is:
 \begin{verbatim}
  (function(){
   "use strict";
-  bignametoavoidclash = 'initialising a global, -10000 marks!'
-  }());
+  try{
+    bignametoavoidclash = 'initialising a global, -10000 marks!';
+  }
+  catch(bro){
+    this.PASS("exception was raised, this is the desired behaviour");
+  }
+  this.FAIL("the exception was not thrown, ES5 strict mode globals are not properly implemented");
+ }());
 \end{verbatim}
-
-
-
-
 
 \section{statistics page}
 

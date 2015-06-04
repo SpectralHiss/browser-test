@@ -75,24 +75,24 @@ proposed future work section of that very paper, and precisely state our own pro
 The remainder of this report consists of:
 \begin{itemize}
  \item A General background section briefly explaining the web technologies involved in detail bla
- \item A review of browseraudit as it stands before the takeover for this thesis and discussing the direction we decided the research to take.
  \item Design and Implementation general design and implementation details.
  \item Tests technicalities where we go more in depth of the specific tests we added through our new interface.
- \item our Stretch goal: risk analysis for the developer and net 
+ \item our Stretch goal: risk analysis reference for the developer.
  \item Evaluation
  \item Conclusion
+ \item Appendix A. a review of Browseraudit previous versions. 
 \end{itemize}
 
 \include{background}
 
-
-\include{browserAudit}
 
 \include{designImpl}
 
 \include{evaluation}
 
 \include{conclusion}
+
+\include{browserAudit}
 
 
 \begin{thebibliography}{1}
@@ -103,11 +103,12 @@ The remainder of this report consists of:
 Applications Conference, ACSAC ’11, pages 307–316, New York, NY, USA, 2011. ACM}
  \bibitem{cors}\emph{Cross-Origin Resource Sharing},W3C Recommendation 16 January 2014, check at http://www.w3.org/TR/2014/REC-cors-20140116/
  \bibitem{buster} Gustav Rydstedt, Elie Bursztein, Dan Boneh, \emph{Busting Frame Busting: a Study of Clickjacking Vulnerabilities on Popular Sites} 
- \bibitem{maffeis} Charlie Hothersall-Thomas, \emph{BrowserAudit A web application that tests the security of browser implementations}, 2011
+ \bibitem{maffeis} Dr Sergio Maffeis, phd Chris Novokavic , \emph{BrowserAudit A web application that tests the security 0of browser implementations}, 2011
  \bibitem {handbook} Dr. Josh Pauli, \emph{the web Application Hacker handbook ver.2}
  \bibitem {tangled} Michal Zalewski, \emph{the Tangled web 2012}.
  \bibitem {soho} \emph{ A Team Cymru EIS Report: Growing Exploitation of Small Office Routers Creating Serious Risks} , available at http://www.doc.ic.ac.uk/~maffeis/331/TeamCymruSOHOPharming.pdf
- \bibitem {charlie} \emph {BrowserAudit A web application that tests the security of browser implementations}, available at at http://www.doc.ic.ac.uk/teaching/distinguished-projects/2014/c.hothersall-thomas.pdf
-\end{thebibliography}
+ \bibitem {charlie} \emph {(V1)BrowserAudit A web application that tests the security of browser implementations}, available at at http://www.doc.ic.ac.uk/teaching/distinguished-projects/2014/c.hothersall-thomas.pdf
+ \bibitem {resig} John Resig, \emph {ECMAScript 5 Strict mode, JSON and More} , available at http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/
+ \end{thebibliography}
 
 \end{document}          
