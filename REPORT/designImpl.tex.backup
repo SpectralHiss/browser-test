@@ -1,22 +1,91 @@
-
 \chapter{Design and implementation}
 
 \section{Improving extensibility and coverage}
 \label{label:addtest}
 
-\subsubsection{Test management interface}
+\subsection{Test management interface}
 
-We needed to add tests..
-we discussed what functions we needed
-decided to just do categories manually , explained how we made it okay design-wise with the .sql file we expect to be filled with all new categories.
-what can we do to add tests , we had to alter
-given the way the context of tests work we can run any js and call test PASS and FAIL.. or call any of the existing ones
+The first thing that was deemed crutial to extend browseraudit was to enable the adding of tests in a convenient manner, this section will
+guide you through the components we needed to build this interface and what design choices entail in our implementation.
+At this point it is important for understanding this project to review appendix \ref{app:A}. in particular to understand
+the structure of the application and have a rough picture of the data model. 
+
+\subsubsection{Scoping}
+
+At the time of project handover there were no more than 5 top categories and a total of under 40 categories and subcategories.
+in light of prioritising time, our first scoping choice was not to pursue the feature that would allow the user to add categories through our interface.
+
+Indeed, our final implementation forces developers to manually add categories, and we had to do this for one new category and subcategory.
+we did this manually but in a future proof way, by making the new categories explicit queries in a database migration file (or .sql file) in order to transparently allow setup on new
+servers or cross developement database servers.
+
+This allows us to focus on the most important part which is the working principle of adding tests to browseraudit with the least pain possible.
+
+The other scoping choice was regarding what the domain of tests that we could add to our interface. As explained in \ref{label:workprinc}, 
+in order for tests to run , go server functions are setup for each particular kind of category. 
+
+\subsubsection{What our test interface can do}
+
+Currently, our test interface allows you to choose a particular (sub) category , enter a title , test function , timeout and add the test to the database.
+It also has a template function fetcher which fetches the test template function for that category along with example usage from the tests that are already in the database.
+A quick reminder of template functions: they are the generic functions that categories use to test a particular function, usually following a particular
+endpoint pattern on the server or variations on the same headers.
+
+In order to allow this , model wise we had to alter the test function invocation field of our test to be able to hold arbitrarily long javascript text.
+The technical working principle of how tests added in this manner eventually run is explained quite precisely in \ref{subsec:princ}. 
+
+
+
+\subsubsection{Test working principle}
+\label{subsec:princ}
+
+So far you've seen that our test interface can add new test functions, let's first show how you would descibe a new test function in our interface:
+Among the many boxes you are presented in the test management interface is the add test function box which contains a code editing textarea with the following
+text already in place:
+\begin{verbatim}
+function(){
+// this function is called with a context containing
+// three functions, PASS, WARNING , CRITICAL or SKIP, usage:
+
+	this.WARNING("Reason for the warning");
+/*
+ alternatively you can make calls to one of the 
+ below functions like cspTest(foo, bar ,jah); 
+ for any category you can get the template function below
+*/} 
+\end{verbatim}
+
+This works because this function body that is saved to the database is loaded as the testFunciton object in the below text.
+Which is invoked with the call method of the Function object , it is called in this manner in order to allow specification
+of the "this" context to be the object containing the PASS, WARNING , CRITICAL and SKIP functions that are used above. 
+
+\begin{verbatim}
+// Execute the test function, using a "test harness" object as the
+		// context (i.e. the "this" object)
+		thisNode.testFunction.call({
+			PASS: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, testStartTime, [ "pass", reason ], testTimer); },
+			WARNING: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, testStartTime, [ "warning", reason ], testTimer); },
+			CRITICAL: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, testStartTime, [ "critical", reason ], testTimer); },
+			SKIP: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, testStartTime, [ "skip", reason ], testTimer); }
+		});
+	      
+\end{verbatim}
+
+Of course this loose way of passing functions is dangerous , we make sure that it is a valid function before  committing to database.
+we do this on the client side because we assume we trust the developer will only make mistakes and not maliciously send to this 
+protected endpoint (with HTTP Auth.)
+
+you can put arbitrary html for the reason for test, but we prefer users stick to simple text to avoid any issues, 
+The test framework is robust enough to, as long as the minimal structure of a test is sound gracefully skip problematic entries in case of error.
+
+\subsubsection{User Interface}
 
 the UI
 
-reusing existing server code
 
-handling static assets
+\subsubsection{Reusing server code}
+setup for the future
+reusing existing server code
 
 \subsubsection{Adding new tests}
 
@@ -51,7 +120,7 @@ Since all of these are restrictions, we will trust that it doesn't over restrict
 Hence, our first test is:
 
 \begin{verbatim}
- (function(){
+ function(){
   "use strict";
   try{
     bignametoavoidclash = 'initialising a global, -10000 marks!';
@@ -60,9 +129,15 @@ Hence, our first test is:
     this.PASS("exception was raised, this is the desired behaviour");
   }
   this.FAIL("the exception was not thrown, ES5 strict mode globals are not properly implemented");
- }());
+ }
 \end{verbatim}
 
 \section{statistics page}
 
-\section{Strech Goal: A DSL for test inputting and parameterisation }
+formatting the data properly.
+
+
+the UI 
+
+
+\section{Open ended Goal: Data-driven browser security reference for the developer }

@@ -1,4 +1,5 @@
-\chapter{Appendix A:  BrowserAudit as it stands}
+\chapter{Appendix A:  BrowserAudit, the previous versions}
+\label{app:A}
 
 \section{Initial project (V1)}
 
@@ -229,7 +230,7 @@ more usable in order to clean up the interface and generalise tests as much as p
 \subsubsection{Test Reporting}
 \label{subsec:reporter}
 
-After all tests are finished the test execution framework sends the full report to the server by first calling  "/suite_execution/put"
+After all tests are finished the test execution framework sends the full report to the server by first calling  "/suite\{_}execution/put"
 which calls PutSuiteExecutionHandler. This function populates the below structs and writes the query to db appropriately.
 The structure is self-explanatory, this is registering an execution of browseraudit to which test executions will refer to it.
 
@@ -248,9 +249,10 @@ type SuiteExecution struct {
 
 \end{verbatim}
 
-When all tests finish successive calls to r.HandleFunc("/suite_execution/get/{id:[0-9]+}/{passkey:[0-9a-f]+}", GetSuiteExecutionHandler)
+When all tests finish successive calls to "\{_}suite\{_}execution/get/{id:[0-9]+}/{passkey:[0-9a-f]+}" calls GetSuiteExecutionHandler.
 
-GetSuiteExecutionHandler 
+GetSuiteExecutionHandler creates records for individual test Outcomes, the primary key Id refers to the id of a test execution
+inserted through the PUT interface described above. testId ASK CHRIS ABOUT THIS. 
 
 \begin{verbatim}
 
