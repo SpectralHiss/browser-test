@@ -1,25 +1,27 @@
 \chapter{Evaluation}
 
-From the planning section we identified that there are three main parts to the project with different fallbacks and here's how evaluation of those should proceed.\
 
-Our initial measure of success will be to empirically determine the effectiveness of different policy configurations on browsers to the latest security threats.\
-We will do this against common browsers and the most recent browsers. This will be the way to quantitatively assess how much depth and breadth we managed \
+For the test managment interface our initial measure of success was that it works properly tested on all the browsers we set to support
+ie8+ with a further confirmation of the correctness of those tests through the new tests we added namely the browser strict mode implementation.
+The end-result performs that task well, and allows quite a range of tests to be added. But as we highlighted in the design and implementation section
+while it enables reusing of template functions and their corresponding go server functions it doesn't provide any way of managing HTML templates
+and indeed could not either check or modify those go server function, it is a direction we prefered not to go to because it entails a lot of coding
+and serious security considerations. A lot of the groundwork is in place for extension, making browseraudit one step closer from .
+
+Browseraudit has no equivalent , but in terms of the results we get that are presented in statistics page the closest analogue we can find is
+browserscope's security tests \cite{browsercope} since they are community driver but they have only certain key tests since they are general to all
+browser features. They also only test wether a browser has a particular useful security feature and not how well those features are implemented.
+Our approach eliminates all doubts except maybe the intent and skill of the test writer and errors can be spotted over executions: trust then verify.
+
+The project excels compared to caniuse.com for example who also just relies on developers authoritative input on wether browser X supports security
+feature Y and correctly.
+
+
+
+As for the other stated objective to empirically determine the effectiveness of different policy configurations on browsers to the latest security threats.\
+Browseraudit succeeds in that the browser security widget will be the way to quantitatively assess how much depth and breadth we managed \
 to achieve in our underlying knowlege of the security considerations . Result can range from not finding many effective attacks to the latest browsers with latest browsers\
 in which case we will still need to document what policies are effective for which cases, attempt to infer general patterns for use by other developers who might not afford the \
 time and effort to do so.\ .
-On the other hand it is entirely possible to find massive flaws in the different policies or the implementation of new HTML5 features in browsers in which case we will \
-have the added benefit of providing insight and advancing security for all. If things go this well, then it will be a good idea to start to build channels of communication\
-with browser devs. or standards people to discuss the direction of standards which might give valuable insight.\
 
-As for the second part (building the data aggregator) this is a fairly mundane programming task which has well defined behaviour that we can test for with Functional tests\
-The ease of use and design is the quality metric that will guage how creative I managed to get with it. and how many extra features were built in the time frame.\
-
-As for building some interactive infographic or something of the kind for making developers save time understanding and using these policies in practice this is more of an\
-open ended goal, and can only measure success by the amount of excitement it generates and perhaps I could do with polling or live testing in order to iteratively build this\
-part. Another way to measure success is hit and bounce rate on the site itself for which we would use googleAnalytics or newrelic to obtain deep insight into what matters\
-to web developers and security aware users.\
-
-Ultimately as a web developer it would be an added benefit and a first point of reference to build something that will make writing secure client based applications less of\
-a hassle. And while precisely contains the cutting edge threats in one place gives also a manner of priorising effort compared to risks. Also giving examples for each types of\
-intrustions in a digestable format would be an very beneficial.\
 

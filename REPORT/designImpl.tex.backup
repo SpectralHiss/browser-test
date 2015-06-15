@@ -8,7 +8,8 @@
 The first thing that was deemed crutial to extend browseraudit was to enable the adding of tests in a convenient manner, this section will
 guide you through the components we needed to build this interface and what design choices entail in our implementation.
 At this point it is important for understanding this project to review appendix \ref{app:A}. in particular to understand
-the structure of the application and have a rough picture of the data model. 
+the structure of the application meaning BrowserAudit V2 according to our appendix's terminology. It is good to have understood
+the data model diagram in \ref{fig:model}. 
 
 \subsubsection{Scoping}
 
@@ -17,29 +18,39 @@ in light of prioritising time, our first scoping choice was not to pursue the fe
 
 Indeed, our final implementation forces developers to manually add categories, and we had to do this for one new category and subcategory.
 we did this manually but in a future proof way, by making the new categories explicit queries in a database migration file (or .sql file) in order to transparently allow setup on new
-servers or cross developement database servers.
+servers or cross development database servers.
 
-This allows us to focus on the most important part which is the working principle of adding tests to browseraudit with the least pain possible.
+This allows us to focus on the most important part which is the working principle of adding tests to Browseraudit with the least pain possible.
 
-The other scoping choice was regarding what the domain of tests that we could add to our interface. As explained in \ref{label:workprinc}, 
-in order for tests to run , go server functions are setup for each particular kind of category. 
+The other scoping choice was regarding what the range of new tests that we could add to our interface. As explained in \ref{label:workprinc}, 
+in order for tests to run , go server functions are set-up for each particular kind of category. 
+In scoping the domain of tests to be added our choice was to let users add new functions or reuse template functions.
+
+some of the things we did to facilitate this is to add previously mentioned new top level category for what are called "client-only tests"
+which only rely on client side functions only. Intended to be hosting any tests that use a new function that doesn't rely on any of the go code
+or template functions that don't fit other categories.
+
+We also allow to reuse any of the current client test template functions and provide utilities to help with this meaning
+that you can reuse any of the go server functions. Lastly you can also add these new functions to any category if you wish and they will work
+as expected, providing a reasonable degree of flexibility.
+
+Don't worry if this is not entirely clear at the moment,  understanding  the domain of tests be easier once you read the
+working principle of how test adding works and how our interface works in \ref{label:workprinc}
 
 \subsubsection{What our test interface can do}
 
-Currently, our test interface allows you to choose a particular (sub) category , enter a title , test function , timeout and add the test to the database.
+Currently, our test interface allows you to choose a particular (sub) category , enter a title , test function , time-out and add the test to the database.
 It also has a template function fetcher which fetches the test template function for that category along with example usage from the tests that are already in the database.
 A quick reminder of template functions: they are the generic functions that categories use to test a particular function, usually following a particular
-endpoint pattern on the server or variations on the same headers.
+endpoint pattern on the server or variations on the same headers, cache directives or different kind of templates fetched etc..
 
-In order to allow this , model wise we had to alter the test function invocation field of our test to be able to hold arbitrarily long javascript text.
+In order to allow this , model wise we had to alter the test function invocation field of our test to be able to hold arbitrarily long Javascript text.
 The technical working principle of how tests added in this manner eventually run is explained quite precisely in \ref{subsec:princ}. 
-
-
 
 \subsubsection{Test working principle}
 \label{subsec:princ}
 
-So far you've seen that our test interface can add new test functions, let's first show how you would descibe a new test function in our interface:
+So far you've seen that our test interface can add new test functions, let's first show how you would describe a new test function in our interface:
 Among the many boxes you are presented in the test management interface is the add test function box which contains a code editing textarea with the following
 text already in place:
 \begin{verbatim}
@@ -55,7 +66,7 @@ function(){
 */} 
 \end{verbatim}
 
-This works because this function body that is saved to the database is loaded as the testFunciton object in the below text.
+This works because this function body that is saved to the database is loaded as the testFunction object in the below text.
 Which is invoked with the call method of the Function object , it is called in this manner in order to allow specification
 of the "this" context to be the object containing the PASS, WARNING , CRITICAL and SKIP functions that are used above. 
 
@@ -76,18 +87,38 @@ we do this on the client side because we assume we trust the developer will only
 protected endpoint (with HTTP Auth.)
 
 you can put arbitrary html for the reason for test, but we prefer users stick to simple text to avoid any issues, 
-The test framework is robust enough to, as long as the minimal structure of a test is sound gracefully skip problematic entries in case of error.
+The test framework is robust enough to, as long as the minimal structure of a test is sound, gracefully skip problematic entries in case of error.
+
+You can see from the above text that you have the convenience of reusing any of the template functions that are already in place for other categories
+this is very good news for extensibility in browseraudit. The only missing part is some way of dealing with browsing and adding html templates
+to use along those functions, to which unfortunately we don't have a current way of doing but is an easy thing to add in the future and we
+can already tinker manually to find these by browsing the server folder directories corresponding to tests like /sop/ajax.html (for example).
 
 \subsubsection{User Interface}
 
-the UI
+the UI was made using knockoutjs \cite{knockoutjs} library a Model-View-View Model pattern, it has proven to be a very powerful framework that once mastered allowed
+to avoid the trouble that dealing with complex HTML and events can become. It also has the advantage of supporting all browsers above ie6 which matches one
+of the objectives behind version 2 of browseraudit that warranted a rewrite of the test framework.
+
+The result is a pretty easy to use minimalistic interface. We decided to go for the main bootstrap theme for style to which we took some liberties
+with the coloring and layout. The UI is presentable, readable and mobile friendly out of the box.
+
+you can see a snapshot of the main interface in \ref{fig:addtest} as you can see , it first asks you to select a sub category from the side collapsible
+menu which it clearly highlights in blue above the title input. The rest of the fields in the form are self-explanatory with a main function 
+input code that was manually built but to which the lines are not used for anything at the moment but is reserved for future possible
+linting of the javascript or indicating source of errors.
+
+The function textarea by default shows the default function which is runnable to explain or remind the user of the format. 
+Below it is a notice reminding users that they can fetch the test template function and example usage of this function by clicking the fetch
+button. this for example gets the following data and presents it nicely with the help of SHJS code highlighting library , \cite{SHJS},customised with a suitable theme.
 
 
-\subsubsection{Reusing server code}
-setup for the future
-reusing existing server code
 
-\subsubsection{Adding new tests}
+\ref{fig:function}
+
+\ref{confirm}
+
+\subsection{Adding new tests}
 
 we start simple, because simple is beautiful. The simplest types of tests we could thing of required a new category: Client-only tests.
 These tests do not require interaction from the server, except for reporting the results for a particular test execution.
@@ -132,12 +163,18 @@ Hence, our first test is:
  }
 \end{verbatim}
 
+
+
+\subsection{Difficulties encountered}
+
 \section{statistics page}
 
 formatting the data properly.
 
 
 the UI 
+
+\subsubsection{Difficulties encountered}
 
 
 \section{Open ended Goal: Data-driven browser security reference for the developer }
