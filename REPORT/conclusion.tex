@@ -1,24 +1,113 @@
 
 \chapter{Conclusion} 
 
+\section{What was achieved}
 
-What we could add to this project is adding new tests, better understanding of the resuts in a no nonsense statistics interface but we judge
+What we could add to this project is adding new tests, better understanding of the resuts in a beautiful statistics interface but we judge
 that our biggest contribution is opening up the space of formalism by recognising that the quality of the data that browseraudit provides, coupled
 with some logically formulated domain knowlege could lead to a practical tool that increases usability of security on the web.
 
+We we able to add our new client tests and they worked properly but then we realised that without the ability to edit html templates and go functions
+we were a bit limited in what we can do. Nevertheless what we have covers quite a range of tests, from client only to tests that reuse test templates.
 
-As for the second part (building the data aggregator) we thought this was to be a fairly mundane programming task which has well defined behaviour
-but ended up being quite tricky due to the rigidness of the data model for executions as well as strange behaviour  \
-Nevertheless due to the RESTful way our server code is setup we ended up reusing a lot of the data model processing and simplifying the task
-for other sides 
+At the time of writing the third open ended goal has not been achieved and we will refrain from jumping to conclusions about it although we think the theoretical basis
+discussed in \ref{open} is sound. And all the required preliminary work is in place which means that we would hopefully have finished this so Dr Sergio's team and ultimately
+the world at large can benefit from the work.
 
-On the other hand it is entirely possible to find massive flaws in the different policies or the implementation of new HTML5 features in browsers in which case we will \
-have the added benefit of providing insight and advancing security for all. If things go this well, then it will be a good idea to start to build channels of communication\
-with browser devs. or standards people to discuss the direction of standards which might give valuable insight.\
-
-
-
-Ultimately as a web developer it would be an added benefit and a first point of reference to build something that will make writing secure client based applications less of\
+Ultimately as a web developer BrowserAudit reloaded will be a first point of reference for browser security that will make writing secure client based applications less of\
 a hassle. And while precisely contains the cutting edge threats in one place gives also a manner of priorising effort compared to risks. Also giving examples for each types of\
-intrustions in a digestable format would be an very beneficial.\
+intrustions in a digestable format we deem as very beneficial.\
 
+\section{Future work}
+
+
+For anyone taking on this project, here are some of the things that could be immediately taken on to expand browserauditReloaded.
+
+\subsection{html and origin/domain and go code interface in adding tests}
+
+It would be very useful for numerous previously stated reasons that there is an extra box that allows the creation of html templates
+from within the test adding interface. This could point to the external /static/ area to avoid any issues (altough care must be taken with path traversal code).
+If Nginx could be told to server those files from different subDomains to have the ability to change origins then that would be even better
+and would mean that most tests could be written without touching anything else.
+An even bolder and riskier extension is to be able to add go code too. We pondered upon this and think the only way to go is to make reusable componenents and allow
+users to compose functions rather than inserting any code ourselves through introspection or other manner. Through such a whitelisting mechanism we make sure that the result
+is safe, although sometimes we can't be sure either.
+
+\subsection{A DSL for inputing our tests}
+
+If anyone takes on the previous task he will quickly realise that the ease of adding tests would have taken a plunge. It will be a nice idea
+to go for a Domain Specific Language to make adding tests convenient and allow the security researcher to focus on thinking about the test than the underlying way 
+in which our tests are carried out. In fact we had already started thinking up the design when we realised it was not the most important part 
+
+\begin{verbatim}
+Origin main = @ me	
+Origin foreign = @(http://, ccc.de, 80)
+
+DomEl frame = [main] = default is in main window
+DomEl elem = frame[child] 
+DomEl newWindow = {[@foreign]} new window with foreign origin
+DomEl frameInfirstWindow = [{newWindow}] gets the window property of new Window's origin and window and makes a new frame at that window
+DomEl frameinMainWindow = [{frame}]
+
+Propblob t= {servOpCode :shill, JSON:true,isJSONparsable:true, hasHelper:true, cookie:"allow bla"}
+
+DomEl other = req @(addr, port, t ) with CSP(prophandler {x-frame-options:true,source-list:'jean','jacques','dutronc'}})  or req (-> foreign) 
+
+??? !other.canAccess(frame)  ???  FAIL : msg
+
+??? other.canRun{
+	// DomElems have corresponding variables instantiated in their context so there is an attempt at 
+	// var frame = findElement("frame") <- which pools puts the ID of the element tries to access in a variable with the same name. 
+	//hence if not allowed 
+	$('#'+frame) <= fails
+
+	canRun is True if:
+		uncaught error arises
+		warning
+} ??? 
+
+%You can have one PropHolder or as many as you want for clarity sake, our simple types have all the RFC specified headers and tries possible vendor ones.
+	PropHolder 2 = {
+	Cache-Control:bla,	
+	}
+
+	req (addr, port, opts[hash])-> GET:(DomEl, headers)
+
+	DomEl secondframe = req @(origin,port,address)
+	secondframe.origin = @(other,fake,one)
+
+??? (frame.canAccess(secondframe) && !secondframe.canAcess(frame)) ??? WARNING :msg
+
+??? (frame.canConnect(link)) ??? FAIL : msg
+\end{verbatim}
+
+This might not be very clear but such a language would allow to construct domelements in different origins either as descendants or
+components of other dom elements or by making requests to specific go functions through the req (-> origin) or req@(addr,port,properties) format.
+such go functions could potentially take in parameters which are the propHandler objects. 
+Once the right elements are in place the DSL would allow you to make assertions, in the form of ??? condition ??? RESULT where RESULT is one of the
+three functions we have currently as this.PASS("reason") or this.WARNING() etc..
+
+Our domEl's could be enhanced with special methods like canAccess(domEl) , canConnect(Origin) or in it's loose form a canRun(js function).
+
+This would be pretty cool we think but since it entails a fair amount of work and that for now the domain is simple enough to be just a javascript
+function we decided not to pursue this direction but have thought out the basics here that if reused would send warmth in our heart. 
+
+\subsection{Other}
+
+these are small things that don't fit into a full category.
+
+\emph{UI/UX stuff}
+
+A Code prettifier in the test function input would be nice, SHJS didn't have line numbering and we discovered code mirror too late and since it doesn't have
+clear instructions we went for our own custom solution, which is pretty good but needs some work.
+
+\emph{Objects}
+
+Browseraudit doesn't test flash nor silverlight nor quicktime nor anything, a very big attack surface that awas one of the biggest is ignored a plugin testing
+category would be useful that would have a special field that can take in object code would be nice. We reckon this is a lot of work but ultimately something
+we need to have.
+
+
+
+
+Thank you for your attention and hope you enjoyed reading this paper.

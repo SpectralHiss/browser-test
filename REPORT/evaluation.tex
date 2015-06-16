@@ -8,6 +8,12 @@ while it enables reusing of template functions and their corresponding go server
 and indeed could not either check or modify those go server function, it is a direction we prefered not to go to because it entails a lot of coding
 and serious security considerations. A lot of the groundwork is in place for extension, making browseraudit one step closer from .
 
+
+As for the second part (building the data aggregator) we thought this was to be a fairly mundane programming task which has well defined behaviour
+but ended up being quite tricky due to the rigidness of the data model for executions as well as strange behaviour  \
+Nevertheless due to the RESTful way our server code is setup we ended up reusing a lot of the data model processing and simplifying the task
+for other sides and as explained in the implementation section it demanded coding of interfaces that ended up being reused quite often.
+
 Browseraudit has no equivalent , but in terms of the results we get that are presented in statistics page the closest analogue we can find is
 browserscope's security tests \cite{browsercope} since they are community driver but they have only certain key tests since they are general to all
 browser features. They also only test wether a browser has a particular useful security feature and not how well those features are implemented.
@@ -23,5 +29,3 @@ Browseraudit succeeds in that the browser security widget will be the way to qua
 to achieve in our underlying knowlege of the security considerations . Result can range from not finding many effective attacks to the latest browsers with latest browsers\
 in which case we will still need to document what policies are effective for which cases, attempt to infer general patterns for use by other developers who might not afford the \
 time and effort to do so.\ .
-
-

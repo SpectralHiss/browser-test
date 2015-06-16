@@ -46,6 +46,12 @@ endpoint pattern on the server or variations on the same headers, cache directiv
 
 In order to allow this , model wise we had to alter the test function invocation field of our test to be able to hold arbitrarily long Javascript text.
 The technical working principle of how tests added in this manner eventually run is explained quite precisely in \ref{subsec:princ}. 
+If you have a version of browseraudit going head to the /manage\_test path or from the main screen follow the manage admins page with the following credentials:
+
+\begin{verbatim}
+username:crackthecode
+password:hello
+\end{verbatim}
 
 \subsubsection{Test working principle}
 \label{subsec:princ}
@@ -74,10 +80,14 @@ of the "this" context to be the object containing the PASS, WARNING , CRITICAL a
 // Execute the test function, using a "test harness" object as the
 		// context (i.e. the "this" object)
 		thisNode.testFunction.call({
-			PASS: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, testStartTime, [ "pass", reason ], testTimer); },
-			WARNING: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, testStartTime, [ "warning", reason ], testTimer); },
-			CRITICAL: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, testStartTime, [ "critical", reason ], testTimer); },
-			SKIP: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, testStartTime, [ "skip", reason ], testTimer); }
+			PASS: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id,
+			testStartTime, [ "pass", reason ], testTimer); },
+			WARNING: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, 
+			testStartTime, [ "warning", reason ], testTimer); },
+			CRITICAL: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id,
+			testStartTime, [ "critical", reason ], testTimer); },
+			SKIP: function(reason) { markHierarchyNode(thisNode.nodeType, thisNode.id, 
+			testStartTime, [ "skip", reason ], testTimer); }
 		});
 	      
 \end{verbatim}
@@ -169,24 +179,98 @@ Hence, our first test is:
  }
 \end{verbatim}
 
+\subsubsection{other potential tests to be added}
 
+Another type of test that is client side only that we will add is navigation policy. At the moment this is one of the things
+that are unwritten law. our mechanism is powerful enough to be able to add one type of navigation policy test which are
+within the same origin and window. so in plain english we could write a test that tests wether a frame is allowed
+to navigate another frame within the same window somewhere but not what are called cross window attacks. 
+see \cite{infosys} for details which itself sites the excellent stanford article \cite{stanford}.
 
-\subsection{Difficulties encountered}
+This is a top priority at the time of writing and hopefuly will get to present it to the reader. it also nicely
+shows the limitations in terms of not being able to create new html from the test adding interface for the cross-window navigation policy.
+It also shows that it is not a fatality since we could use the /static folder to hold such template and fetch them from 
+our code even if such fix is not ideal and error prone.
 
-\section{statistics page}
+\subsection{statistics page}
 
-Our tests 
+Our tests test a plethora of browser features and neatly present the results to your browser in the /test page, but we felt that a lot of valuable information
+was laying in the database that wouldn't get shown to the user, so we decided to aggregate user executions data in one interface available at /stats or again
+by following the statistics link from the landing page.
 
-the UI 
+This page shows the results across unique browsers (or User-Agent strings) taking the latest execution from that particular type of browser and logging the results
+per subcategory per test with all the tallies for an execution, a subcategory a category and all categories cumulated and indicated clearly next to these partitions.
 
+\subsubsection{User interface}
+
+We chose a simple layout, reusing the look and feel of the category picker from the manage\_test page. It shows at the bottom the grand total across all categories
+for all (browser) unique executions :number of passes/ total , number of criticals/total , number of warnings/total .
+
+We then used badges on the list of categories to contain the tallies of the categories and sub categories which are collapsible and colour coded for convenience.
+
+Clicking on a sub category reveals a full width table containing test results per unique browser execution. The outcome for that clearly shown and a last column
+with the totals for a unique browser execution at the end that also follows the same format , namely: number of passes/ total , number of criticals/total , number of warnings/total.
+see \ref{fig:stats}
+
+\subsubsection{what it offers}
+We found that after many redesigns this way of doing things gave users the most important information the most concisely. In fact just through debugging it
+we found all the entries that were flagged as problematic in Charlie's paper \cite{charlie} quickly , this design was chosen because it enables finding 
+problematic entries quickly and forces the user to think about the relevant categorization of data and we are content with what it offers.
+Building this interface required a fair amount of plumbing on the server and also in terms of knockout and view code which is something we made future proof
+meaning that beyond what it offers the statistics page is a stepping stone towards other uses of that data and as you can see we have also modularised our
+category "processing" code and reused it already in the statistics page and we believe that much of this will be reused in our third and final direction in which we
+chose to extend Browseraudit which will be discussed next.
 
 \section{Open ended Goal: Data-driven browser security reference for the developer }
+\label{open}
 
-\section{Future Work}
+The next natural thing our research has brought us to is what we called a Data-driven browser security reference a clumsy name perhaps but we haven't found an equivalent
+and once built it should be self-explanatory. The idea stemmed from the simple enquiry , since Browseraudit's audience are mainly developers and security researchers/enthusiasts
+we asked ourselves what would be the most useful thing I can get from all the data we have in Browseraudit and our domain knowledge we have about browser client security.
+The best thing we could thing of is what you can see in \ref{fig:mockup}.
 
-A DSL for inputing our tests
+Here's how it would work. You have a bunch of drop downs corresponding to different browsers you select. when you select an entry that looks like :
+Ie6 it gets added to the list of constraints , which for example could have a [Firefox 38.0 x] already in and would become 
+[[Ie6 x] , [Firefox 38.0]]. What it essentially means is the set of browsers you intent to support in any given web application you plan to deploy.
 
-Code prettifier with syntax and stuff like codepen (didn't occur to use at the time we just coded it)
+Next is where the 'magic' is. using our data we construct the set of features that working properly for those sets of browsers and query
+a Datalog backend to use logical inference to tell us what security fixes to use for those browsers.
 
-Tree walker of /static so people can see what templates they can use , perhaps even create, something to specify the domain origins of these that go towards exposing a generic API for the golang side, instead of taking on risk by adding a go function editor!
+Admitedly this is still in the research and design stage. but to give you a rough idea of what we mean. The backend would be encoding or formalising
+rules like :
 
+\begin{verbatim}
+ 
+Safe:- XSSSafe AND CSRFSafe AND SSLSafe AND ClickJackingSafe.
+
+CSPGood(X):- (CSPPolicy(BLA) AND CSPWorks(BLA)
+XSSSafe :- CSPWorks(X) OR (XSSFilter) OR Sandbox(BLA)).
+CSRFSafe:- (CSPWorks(X) OR CSRFTokens).
+ClickJackingSafe:- ((X-FrameOptions(BLA) AND hasXframeOptions(BLA)) OR TopCheckingCode).
+SSLSafe :- HSTSGood AND GoodSSL AND.
+XSSMitigate:- CookieSecure AND (CookieHTTPOnly).
+
+\end{verbatim}
+
+Since they are all positive logical properties and at the suggestion of our supervisor, the domain knowlege should be made into positive propositional logical statements we can
+use datalog and avoid problems with negation. Although less elegant, our domain of tests propositions is finite and relatively small, we believe that we 
+can avoid First Order Logic which is undecidable and is not needed but this has yet to be seen in the wild.
+
+The idea is to simulate abductive logic programming by passing such a normal logic program a set of ground truth like {CSPWorks('object') , HSTSGood, CSRFWorks('bla')..}
+which, as you can see is the reason why we said we wanted the set of things that work properly for those browsers from our frontend and browseraudit data.
+
+Our normal logic program is written in a manner whose pattern is crudely:
+SatisfyourStandardsofSecurity := (having all these conditions) OR (doingthisInstead) OR taking mitigation measure X).
+
+because it is the most natural way we could thing of , but could have been written in the form of:
+DoThis := (SatisfyourStandardsofSecurity).
+DothisInstead := ifYouHavethisFallbackRequirement.
+TakeMitigation := true. <- avoids using NOT but is also somewhat erroneous because it always takes mitigation.
+
+We prefered our approach because it is more natural and allows for more expressivity and feels less 'hacky' do not worry if the details of
+abductive logic programming is not fresh in your mind, what we mean here is collecting the trace of the datalog query. or in other words the ground truth
+that makes the Safe predicate true. And convert it through a fixed mapping to practical text detailing what you should do as a web developer to secure your site
+against client side attacks for those browsers.
+
+We aim to have something to demo for this but the space of formalising the rules is very vast . It is also the most intellectually stimuating 
+and if done right a huge benefit for both the standardisation community and developers at large.

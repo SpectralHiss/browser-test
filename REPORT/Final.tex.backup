@@ -4,16 +4,51 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 
-
-% Title Page
-\title{BrowserAudit - Reloaded: Towards a complete framework for testing browser client-side security}
-
-\author{Houssem El Fekih}
-
-
 \begin{document}
-\maketitle 
+%titlepage
+\thispagestyle{empty}
+\begin{center}
+\begin{minipage}{0.75\linewidth}
+    \centering
+%University logo
+    \includegraphics[width=1\linewidth]{logo.jpg}
+    \vspace{5cm}
+%Thesis title
+    {\Large BrowserAudit - Reloaded: Towards a complete framework for testing browser client-side security.}
+    \vspace{3cm}
+%Author's name
+    {\Large Houssem El Fekih\par}
+    \vspace{3cm}
+%Degree
+    {\Large A thesis submitted for the degree of Computing B.eng\par}
+    \vspace{3cm}
+%Date
+    {\Large June 2015}
+\end{minipage}
+\end{center}
+\clearpage
+
+
 \begin{abstract}
+ In the fragile World Wide Web of today, Keeping track of client security as a web developer for any given browser can be a daunting
+ task, and is becoming a lot more necessary since browser capabilities have increased drastically and single page applications are becoming
+ increasingly complex and aggregate lots of functionality often from all over the web.
+ 
+ Getting the security right is analogeous to trying to make a certain html feature work properly across browsers. It is rife with multiple kinds
+ of problems, these problems can stem from better insight from certain technical teams (illustrated by the X-frame-Options in Chrome), 
+ political or legal differences (illustrated by mp3 vs oggvorbis support in audio tags) or fundamental disagreements or opinions about what users will use 
+ (illustrated by the lack of proper CSP in IE), or simply lack of time and effort to support the latest feature ( sandbox in Firefox) .
+ even worse than all these differences is when something is not standardised like the navigation policy.
+ 
+ BrowserAudit takes a no nonsense approach and instead of verifying based on the 
+ 
+ This addition to BrowserAudit dubbed Browseraudit Reloaded, is the second personal project regarding testing client browser implmentation. It takes
+ Charlie Hothersall, Chris Novokavic  and Dr Sergio Maffeis' excellent work and brings it one step closer towards a complete release. Our exporatory
+ work allows to extend the rigid test inputing mechanism into an easy to use test adding interface, presents all the data to be used by the community 
+ at large.
+ It also offers a new application for developers at large to solve the exact pain of keeping track of all the steps one can take to be as reasonably
+ safe as possible on the web. By using the unique data we have and formally encoding our domain knowlege we have the kind of guarantees that will
+ benefit the security of web at large and make it more robust.
  
 \end{abstract}
 
@@ -92,6 +127,7 @@ The remainder of this report consists of:
 
 \include{conclusion}
 
+\appendix
 \include{browserAudit}
 
 
@@ -103,12 +139,17 @@ The remainder of this report consists of:
 Applications Conference, ACSAC ’11, pages 307–316, New York, NY, USA, 2011. ACM}
  \bibitem{cors}\emph{Cross-Origin Resource Sharing},W3C Recommendation 16 January 2014, check at http://www.w3.org/TR/2014/REC-cors-20140116/
  \bibitem{buster} Gustav Rydstedt, Elie Bursztein, Dan Boneh, \emph{Busting Frame Busting: a Study of Clickjacking Vulnerabilities on Popular Sites} 
- \bibitem{maffeis} Dr Sergio Maffeis, phd Chris Novokavic , \emph{BrowserAudit A web application that tests the security 0of browser implementations}, 2011
+ \bibitem{maffeis} Dr Sergio Maffeis, phd Chris Novokavic , \emph{BrowserAudit A web application that tests the security of browser implementations}, 2011
  \bibitem {handbook} Dr. Josh Pauli, \emph{the web Application Hacker handbook ver.2}
  \bibitem {tangled} Michal Zalewski, \emph{the Tangled web 2012}.
  \bibitem {soho} \emph{ A Team Cymru EIS Report: Growing Exploitation of Small Office Routers Creating Serious Risks} , available at http://www.doc.ic.ac.uk/~maffeis/331/TeamCymruSOHOPharming.pdf
  \bibitem {charlie} \emph {(V1)BrowserAudit A web application that tests the security of browser implementations}, available at at http://www.doc.ic.ac.uk/teaching/distinguished-projects/2014/c.hothersall-thomas.pdf
  \bibitem {resig} John Resig, \emph {ECMAScript 5 Strict mode, JSON and More} , available at http://ejohn.org/blog/ecmascript-5-strict-mode-json-and-more/
+ \bibitem {knockout} \emph{Simplify dynamic Javascript UIs with the MVVM pattern}, website:http://knockoutjs.com/
+ \bibitem {SHJS} \emph{SHJS - Syntax Highlighting in JavaScript} , website: http://shjs.sourceforge.net/
+ \bibitem {infosys} \emph{Frame Navigation Policies in web browsers-One reason to upgrade to modern browsers}, available at http://www.infosysblogs.com/infosys-labs/2012/01/frame\_navigation\_policies\_in\_w.html
+ \bibitem {stanford} \emph{Secure Frame Communications in Browsers} , available at http://seclab.stanford.edu/websec/frames/post-message.pdf
+ \bibitem {browserscope} http://www.browserscope.org/ 
  \end{thebibliography}
 
 \end{document}          

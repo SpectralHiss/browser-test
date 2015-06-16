@@ -43,20 +43,26 @@
 \contentsline {subsubsection}{What our test interface can do}{29}
 \contentsline {subsubsection}{Test working principle}{29}
 \contentsline {subsubsection}{User Interface}{31}
-\contentsline {subsection}{\numberline {2.1.2}Adding new tests}{31}
+\contentsline {subsection}{\numberline {2.1.2}Adding new tests}{32}
 \contentsline {subsubsection}{Strict mode javascript tests}{32}
-\contentsline {subsection}{\numberline {2.1.3}Difficulties encountered}{33}
-\contentsline {section}{\numberline {2.2}statistics page}{33}
-\contentsline {subsubsection}{Difficulties encountered}{33}
-\contentsline {section}{\numberline {2.3}Open ended Goal: Data-driven browser security reference for the developer }{33}
-\contentsline {chapter}{\numberline {3}Evaluation}{34}
-\contentsline {chapter}{\numberline {4}Conclusion}{36}
-\contentsline {chapter}{\numberline {A}Appendix A: BrowserAudit, the previous versions}{37}
-\contentsline {section}{\numberline {A.1}Initial project (V1)}{37}
-\contentsline {section}{\numberline {A.2}Current version (V2)}{39}
-\contentsline {subsection}{\numberline {A.2.1}Test Backend in V2}{40}
-\contentsline {subsubsection}{Overall working principle}{40}
-\contentsline {subsubsection}{PostgreSQL model}{41}
-\contentsline {subsubsection}{The server}{42}
-\contentsline {subsubsection}{The Client test classes}{44}
-\contentsline {subsubsection}{Test Reporting}{46}
+\contentsline {subsubsection}{other potential tests to be added}{33}
+\contentsline {subsection}{\numberline {2.1.3}statistics page}{33}
+\contentsline {subsubsection}{User interface}{34}
+\contentsline {subsubsection}{what it offers}{34}
+\contentsline {section}{\numberline {2.2}Open ended Goal: Data-driven browser security reference for the developer }{35}
+\contentsline {chapter}{\numberline {3}Evaluation}{37}
+\contentsline {chapter}{\numberline {4}Conclusion}{39}
+\contentsline {section}{\numberline {4.1}What was achieved}{39}
+\contentsline {section}{\numberline {4.2}Future work}{40}
+\contentsline {subsection}{\numberline {4.2.1}html and origin/domain and go code interface in adding tests}{40}
+\contentsline {subsection}{\numberline {4.2.2}A DSL for inputing our tests}{40}
+\contentsline {subsection}{\numberline {4.2.3}Other}{42}
+\contentsline {chapter}{\numberline {A}Appendix A: BrowserAudit, the previous versions}{43}
+\contentsline {section}{\numberline {A.1}Initial project (V1)}{43}
+\contentsline {section}{\numberline {A.2}Current version (V2)}{45}
+\contentsline {subsection}{\numberline {A.2.1}Test Backend in V2}{46}
+\contentsline {subsubsection}{Overall working principle}{46}
+\contentsline {subsubsection}{PostgreSQL model}{47}
+\contentsline {subsubsection}{The server}{48}
+\contentsline {subsubsection}{The Client test classes}{50}
+\contentsline {subsubsection}{Test Reporting}{52}
